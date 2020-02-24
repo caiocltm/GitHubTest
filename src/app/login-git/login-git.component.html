@@ -1,0 +1,13 @@
+<section id="login-git">
+  <app-loading-screen *ngIf="loadingData"></app-loading-screen>
+  <div class="flex-row w-100 d-flex justify-content-center flex-wrap">
+    <p class="w-100 d-flex justify-content-center flex-wrap">
+      Para visualizar seus repositórios basta se logar clicando no botão abaixo.
+    </p>
+    <p>
+      <a href="https://github.com/login/oauth/authorize?scope=user:tiago.souza.santos1989@gmail.com&client_id={{clienteIdList[host].client_id}}">
+        <button>GitHub Login</button>
+      </a>
+    </p>
+  </div>
+</section>

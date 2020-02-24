@@ -1,0 +1,28 @@
+<section id="repositories">
+  <app-loading-screen *ngIf="loadingData"></app-loading-screen>
+  <div class="flex-row w-100 d-flex flex-wrap">
+    <div class="flex-row w-100 d-flex flex-wrap">
+      <div>
+        <img src="{{userData.avatar_url}}" alt="" srcset="">
+      </div>
+      <div class="flex-column d-flex flex-wrap">
+        <span class="mini-bio">{{userData.name}}</span>
+        <a href="{{userData.html_url}}" class="mini-bio" target="_blank">{{userData.login}}</a>
+        <span class="mini-bio"><fa-icon icon="folder-open"></fa-icon>{{userData.public_repos}}</span>
+      </div>
+    </div>
+    <div class="flex-row d-flex justify-content-center flex-wrap col-12 col-sm-6 col-xl-4" *ngFor="let repo of repos">
+      <div class="card flex-row d-flex flex-wrap w-100">
+        <div class="flex-row d-flex w-100 w-50-m w-50-l">
+          <fa-icon icon="folder-open"></fa-icon><span class="repo-name">&nbsp;{{repo.name}}</span>
+        </div>
+        <div class="flex-row d-flex w-50 w-25-m w-25-l">
+          <fa-icon icon="star"></fa-icon><span>{{repo.stargazers_count}}</span>
+        </div>
+        <div class="flex-row d-flex w-50 w-25-m w-25-l">
+          <fa-icon icon="code-branch"></fa-icon><span>{{repo.forks_count}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

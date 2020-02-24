@@ -1,0 +1,20 @@
+@import '../../sass/base';
+#repositories{
+    padding: 10px;
+    div.card{
+        margin:5px;
+        padding: 8px;
+        background-color: $white;
+    }
+    .repo-name{
+        font-weight: bold;
+    }
+    img{
+        max-width: 70px;
+        max-height: 70px;
+        border-radius: 40px;
+    }
+    .mini-bio{
+        padding: 2px 12px;
+    }
+}
